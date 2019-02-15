@@ -20,6 +20,11 @@
     $egender = "";
     $eblgroup = "";
     $edivision = "";
+
+
+    $sql = "select * from student where id = ".$_GET['eid'];
+    $table = mysqli_query($cn, $sql);
+    $row = mysqli_fetch_assoc($table);
 					
 	if(isset($_POST['submit']))
 	{
@@ -167,16 +172,16 @@
             if(mysqli_query($cn, $sql))
             {
                 print '<span class = "successMessage">Data update successfully</span>';
-                $sname = "";
-                $gname = "";
-                $contact = "";
-                $email = "";
-                $address = "";
-                $class = "";
-                $shift = "";
-                $gender = "";
-                $blgroup = "";
-                $division = "";
+                $row['sname'] = "";
+                $row['gname'] = "";
+                $row['contact'] = "";
+                $row['email'] = "";
+                $row['address'] = "";
+                $row['class'] = "";
+                $row['shift'] = "";
+                $row['gender'] = "";
+                $row['blgroup'] = "";
+                $row['division'] = "";
             }
             else
             {
@@ -200,8 +205,8 @@ function test_input($data)
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h3 id="et">Edit the ID no:
-                        <?php print $_GET['eid']; ?> student's information</h3>
+                    <h3 id="et">Edit the ID:
+                        <?php print $_GET['eid'].', Name: '.$row["sname"]; ?>'s information</h3>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -212,30 +217,30 @@ function test_input($data)
                                         <h5><label for="sname">Student name</label>
                                             <span class="error">
                                                 <?php print $esname; ?></span></h5>
-                                        <p><input type="text" name="sname" value="<?php print $sname; ?>"></p>
+                                        <p><input type="text" name="sname" value="<?php print $row['sname']; ?>"></p>
 
                                         <h5><label for="gname">gurdian name</label><span class="error">
                                                 <?php print $egname; ?></span></h5>
-                                        <p><input type="text" name="gname" value="<?php print $gname; ?>"></p>
+                                        <p><input type="text" name="gname" value="<?php print $row['gname']; ?>"></p>
 
                                         <h5><label for="contact">contact</label><span class="error">
                                                 <?php print $econtact; ?></span></h5>
-                                        <p><input type="text" name="contact" value="<?php print $contact; ?>"></p>
+                                        <p><input type="text" name="contact" value="<?php print $row['contact']; ?>"></p>
 
                                         <h5><label for="email">email</label><span class="error">
                                                 <?php print $eemail; ?></span></h5>
-                                        <p><input type="text" name="email" value="<?php print $email; ?>"></p>
+                                        <p><input type="text" name="email" value="<?php print $row['email']; ?>"></p>
 
                                         <h5><label for="address">address</label><span class="error">
                                                 <?php print $eaddress; ?></span></h5>
-                                        <p><textarea name="address"><?php print $address; ?></textarea></p>
+                                        <p><textarea name="address"><?php print $row['address']; ?></textarea></p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="right-side-form">
                                         <h5><label for="class">class</label><span class="error">
                                                 <?php print $eclass; ?></span></h5>
-                                        <p><input type="text" name="class" value="<?php print $class; ?>"></p>
+                                        <p><input type="text" name="class" value="<?php print $row['class']; ?>"></p>
 
                                         <h5><label for="shift">shift</label></h5>
                                         <p><select name="shift" id="">
@@ -256,7 +261,7 @@ function test_input($data)
                                         <h5><label for="blgroup">blood group</label><span class="error">
                                                 <?php print $eblgroup; ?></span></h5>
 
-                                        <p><input type="text" name="blgroup" value="<?php print $blgroup; ?>"></p>
+                                        <p><input type="text" name="blgroup" value="<?php print $row['blgroup']; ?>"></p>
 
                                         <h5><label for="division">division</label></h5>
                                         <p><select name="division" id="">
@@ -267,7 +272,7 @@ function test_input($data)
                                             </select><span class="error">
                                                 <?php print $edivision; ?></span></p>
 
-                                        <p><input type="submit" name="submit" value="Submit"></p>
+                                        <p><input type="submit" name="submit" value="Save Change"></p>
                                     </div>
                                 </div>
                             </div>
