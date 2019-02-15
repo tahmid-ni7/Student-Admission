@@ -1,3 +1,4 @@
+<div id="padding">
 <div class="section-title">
     <h3>Students list</h3>
 </div>
@@ -50,4 +51,4 @@
         }
 	
     ?>
-              
+</div>
