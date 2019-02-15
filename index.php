@@ -104,7 +104,7 @@ $cn = mysqli_connect("localhost", "root", "", "db_admission");
     </div>
     <!--=========================== Content-area ============================-->
     <div class="content-area">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
 
