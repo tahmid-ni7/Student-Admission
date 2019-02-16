@@ -6,7 +6,11 @@ For protect from HTML injection I use some function here, these are-
 - mysqli_real_escape_string()
 - htmlentities()
 
-It is very simple and I build it for my practise...
+It is a very simple project and I build it for **basic PHP** practise...
+### Features:
+- Insert students
+- View students informations
+- Update and delete student
 
 For better help and using the project please read the "read me.txt" file.
 
