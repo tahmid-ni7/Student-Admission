@@ -297,7 +297,6 @@ td {
     display: block;
     background: #00770D;
     color: #fff;
-    padding: 2px 5px;
     border-radius: 5px;
     margin-bottom: 5px;
 }
@@ -306,13 +305,19 @@ td {
     display: block;
     background: #BE4B49;
     color: #fff;
-    padding: 2px 5px;
     border-radius: 5px;
 }
 
 .action-e:hover,
 .action-d:hover {
     color: #fff;
+}
+
+.action-d i.fa,
+a.action-e i.fa {
+    display: block;
+    padding: 5px 0;
+    font-size: 16px;
 }
 
 tr:nth-child(even) {
@@ -372,7 +377,7 @@ footer h3 {
 .content-area {
     padding-bottom: 30px;
 }
-div#padding
-{
+
+div#padding {
     padding: 0 60px;
 }
