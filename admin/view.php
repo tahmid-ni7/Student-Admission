@@ -35,8 +35,8 @@
 					print '<td>'.htmlentities($row["gender"]).'</td>';
 					print '<td>'.htmlentities($row["blgroup"]).'</td>';
 					print '<td>'.htmlentities($row["division"]).'</td>';
-					print '<td> <a class= "action-e" href= "?a=edit&eid='.$row["id"].'">Edit</a>
-					<a class= "action-d" href= "?a='.$_GET['a'].'&did='.$row['id'].'">Delete</a></td>';
+					print '<td> <a class= "action-e" href= "?a=edit&eid='.$row["id"].'"><i class="fa fa-wrench" title="Update"></i></a>
+					<a class= "action-d" href= "?a='.$_GET['a'].'&did='.$row['id'].'"><i class="fa fa-trash" title="Delete"></i></a></td>';
 					print '</tr>';
 				}
 	
@@ -51,4 +51,5 @@
         }
 	
     ?>
+     
 </div>
