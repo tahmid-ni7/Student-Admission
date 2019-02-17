@@ -15,3 +15,6 @@ It is a very simple project and I build it for **basic PHP** practise...
 For better help and using the project please read the "read me.txt" file.
 
 Thanks from Tahmid Nishat
+
+### Live Project view:
+http://stdudentadd.tahmid-ni7.cf/
